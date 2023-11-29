@@ -11,13 +11,13 @@ import com.example.splashanimation.SplashScreen
 @Composable
 fun Navigation(){
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = "splash_screen"){
+    NavHost(navController = navController, startDestination = Screens.SplashScreen.route){
 
-        composable("splash_screen"){
+        composable(Screens.SplashScreen.route){
         SplashScreen(navController = navController)
         }
 
-        composable("main_screen"){
+        composable(Screens.HomeScreen.route){
          HomeScreen(navController = navController)
         }
     }
